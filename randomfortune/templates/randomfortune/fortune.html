@@ -1,0 +1,21 @@
+{% extends 'randomfortune/base.html' %}
+
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'randomfortune/style.css' %}">
+  {% endblock %}
+
+{% block title %}
+  <title>Fortune page</title>
+{% endblock %}
+
+{% block content %}
+  <!-- Edit the <p> element below -->
+  <p>{{fortune}}!</p>
+  <ul>
+    {% for item in fortuneList %}
+        <li>{{item}}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
